@@ -25,8 +25,7 @@ const FormInput = forwardRef<HTMLInputElement, IProps>((props, ref) => {
       <span>{title}</span>
       <InputStyle
         ref={ref}
-        type={type ? type : "text"}
-        {...{ ...register, placeholder }}
+        {...{ ...register, placeholder, type: type ? type : "text" }}
         autoComplete="off"
       />
       <span className="text-sm text-red-500">{message}</span>
