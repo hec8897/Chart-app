@@ -12,6 +12,7 @@ interface IProps extends IStyle {
 
 const FlexStyle = tw.div<IStyle>`
     flex
+    h-full
     ${(props) => props.$col && "flex-col"}
     ${(props) => props.gap && `gap-${props.gap}`}
 `;

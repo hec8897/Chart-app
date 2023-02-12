@@ -40,6 +40,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss", "npm:8.4.21"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:18.2.0"],\
+            ["react-hook-form", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:7.43.1"],\
             ["react-query", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:3.39.3"],\
             ["tailwind-styled-components", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:2.2.0"],\
             ["tailwindcss", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:3.2.6"],\
@@ -1024,6 +1025,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss", "npm:8.4.21"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:18.2.0"],\
+            ["react-hook-form", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:7.43.1"],\
             ["react-query", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:3.39.3"],\
             ["tailwind-styled-components", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:2.2.0"],\
             ["tailwindcss", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:3.2.6"],\
@@ -3943,6 +3945,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["loose-envify", "npm:1.4.0"],\
             ["react", "npm:18.2.0"],\
             ["scheduler", "npm:0.23.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-hook-form", [\
+        ["npm:7.43.1", {\
+          "packageLocation": "./.yarn/cache/react-hook-form-npm-7.43.1-6b216fde13-a15b672885.zip/node_modules/react-hook-form/",\
+          "packageDependencies": [\
+            ["react-hook-form", "npm:7.43.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:7.43.1", {\
+          "packageLocation": "./.yarn/__virtual__/react-hook-form-virtual-23deb3bc13/0/cache/react-hook-form-npm-7.43.1-6b216fde13-a15b672885.zip/node_modules/react-hook-form/",\
+          "packageDependencies": [\
+            ["react-hook-form", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:7.43.1"],\
+            ["@types/react", "npm:18.0.27"],\
+            ["react", "npm:18.2.0"]\
           ],\
           "packagePeers": [\
             "@types/react",\
