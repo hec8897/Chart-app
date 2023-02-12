@@ -8,7 +8,17 @@ const useRequest = () => {
     );
     return request.data;
   }, []);
-  return { getList };
+
+  const postAutho = useCallback(
+    async (variable: { uid: string; password: string }) => {
+      return axios.post("https://jsonplaceholder.typicode.com/posts", {
+        ...variable,
+        name: "dawoon",
+      });
+    },
+    []
+  );
+  return { getList, postAutho };
 };
 
 export default useRequest;

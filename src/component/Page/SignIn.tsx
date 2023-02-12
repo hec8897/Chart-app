@@ -2,6 +2,7 @@ import { useCallback } from "react";
 import { LayoutContainer } from "component/template";
 import { Input, Flex, SubmitButton } from "component/UI";
 import { useForm } from "react-hook-form";
+import { useRequest } from "hooks";
 
 interface Autho {
   uid: string;
@@ -21,14 +22,18 @@ const SignIn = () => {
     formState: { isValid, errors },
   } = useForm<Autho>({
     defaultValues: {
-      uid: "",
+      uid: "test-id",
       password: "",
     },
   });
+  const { postAutho } = useRequest();
 
-  const onSubmit = useCallback((data: Autho) => {
-    console.log(data);
-  }, []);
+  const onSubmit = useCallback(
+    (data: Autho) => {
+      postAutho(data);
+    },
+    [postAutho]
+  );
 
   return (
     <LayoutContainer>
