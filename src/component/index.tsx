@@ -1,1 +1,3 @@
-export { default as PageContainer } from "./HOC/PageContainer";
+export * from "./template";
+export * from "./Page";
+export * from "./UI";
