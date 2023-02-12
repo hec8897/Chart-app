@@ -1,9 +1,21 @@
+import { Suspense } from "react";
 import { PageContainer } from "component";
+import { useRequest } from "hooks";
+import { useQuery } from "react-query";
 
 const Home = () => {
+  const { getList } = useRequest();
+  const { data } = useQuery("list", getList, {
+    suspense: true,
+    onSuccess(data) {
+      console.log(data);
+    },
+  });
   return (
     <PageContainer>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Suspense fallback={<div>loading</div>}>
+        <div>{data.title}</div>
+      </Suspense>
     </PageContainer>
   );
 };
