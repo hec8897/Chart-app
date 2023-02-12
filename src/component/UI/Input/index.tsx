@@ -1,6 +1,12 @@
 import React from "react";
 import tw from "tailwind-styled-components";
 
+interface IProps {
+  type?: "text" | "password";
+  name?: string;
+  placeholder?: string;
+}
+
 const InputStyle = tw.input`
   border-2 
   w-full 
@@ -9,6 +15,12 @@ const InputStyle = tw.input`
   rounded-md
 `;
 
-const Input = () => <InputStyle type="text" />;
+const Input = ({ placeholder, name, type }: IProps) => (
+  <InputStyle
+    type={type ? type : "text"}
+    {...{ placeholder, name }}
+    autoComplete="off"
+  />
+);
 
 export default Input;
