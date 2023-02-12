@@ -41,6 +41,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:18.2.0"],\
             ["react-query", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:3.39.3"],\
+            ["tailwind-styled-components", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:2.2.0"],\
             ["tailwindcss", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:3.2.6"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
           ],\
@@ -1024,6 +1025,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:18.2.0"],\
             ["react-query", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:3.39.3"],\
+            ["tailwind-styled-components", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:2.2.0"],\
             ["tailwindcss", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:3.2.6"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
           ],\
@@ -4462,6 +4464,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["synckit", "npm:0.8.5"],\
             ["@pkgr/utils", "npm:2.3.1"],\
             ["tslib", "npm:2.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["tailwind-merge", [\
+        ["npm:1.9.1", {\
+          "packageLocation": "./.yarn/cache/tailwind-merge-npm-1.9.1-2db93e6489-351d740d17.zip/node_modules/tailwind-merge/",\
+          "packageDependencies": [\
+            ["tailwind-merge", "npm:1.9.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["tailwind-styled-components", [\
+        ["npm:2.2.0", {\
+          "packageLocation": "./.yarn/cache/tailwind-styled-components-npm-2.2.0-abf8227684-482eb7651a.zip/node_modules/tailwind-styled-components/",\
+          "packageDependencies": [\
+            ["tailwind-styled-components", "npm:2.2.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:2.2.0", {\
+          "packageLocation": "./.yarn/__virtual__/tailwind-styled-components-virtual-1a4c0b253a/0/cache/tailwind-styled-components-npm-2.2.0-abf8227684-482eb7651a.zip/node_modules/tailwind-styled-components/",\
+          "packageDependencies": [\
+            ["tailwind-styled-components", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:2.2.0"],\
+            ["@types/react", "npm:18.0.27"],\
+            ["@types/react-dom", "npm:18.0.10"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:18.2.0"],\
+            ["tailwind-merge", "npm:1.9.1"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react",\
+            "react-dom",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
