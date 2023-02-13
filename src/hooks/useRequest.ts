@@ -1,7 +1,10 @@
 import { useCallback } from "react";
 import axios from "axios";
+import { authoState } from "store/autho";
+import { useSetRecoilState } from "recoil";
 
 const useRequest = () => {
+  const setValue = useSetRecoilState(authoState);
   const getList = useCallback(async () => {
     const request = await axios.get(
       "https://jsonplaceholder.typicode.com/posts/1"
@@ -11,10 +14,20 @@ const useRequest = () => {
 
   const postAutho = useCallback(
     async (variable: { uid: string; password: string }) => {
-      return axios.post("https://jsonplaceholder.typicode.com/posts", {
-        ...variable,
-        name: "dawoon",
-      });
+      try {
+        const res = await axios.post(
+          "https://jsonplaceholder.typicode.com/posts",
+          {
+            ...variable,
+            name: "dawoon",
+          }
+        );
+        const { name, uid } = res.data;
+        setValue({ name, uid });
+        return true;
+      } catch {
+        return false;
+      }
     },
     []
   );
