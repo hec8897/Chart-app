@@ -42,6 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:18.2.0"],\
             ["react-hook-form", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:7.43.1"],\
             ["react-query", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:3.39.3"],\
+            ["recoil", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:0.7.6"],\
             ["tailwind-styled-components", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:2.2.0"],\
             ["tailwindcss", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:3.2.6"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
@@ -1027,6 +1028,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:18.2.0"],\
             ["react-hook-form", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:7.43.1"],\
             ["react-query", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:3.39.3"],\
+            ["recoil", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:0.7.6"],\
             ["tailwind-styled-components", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:2.2.0"],\
             ["tailwindcss", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:3.2.6"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
@@ -2367,6 +2369,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/grapheme-splitter-npm-1.0.4-648f2bf509-0c22ec54de.zip/node_modules/grapheme-splitter/",\
           "packageDependencies": [\
             ["grapheme-splitter", "npm:1.0.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["hamt_plus", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/hamt_plus-npm-1.0.2-67a52ee1df-af26ea32db.zip/node_modules/hamt_plus/",\
+          "packageDependencies": [\
+            ["hamt_plus", "npm:1.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4045,6 +4056,37 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["readdirp", "npm:3.6.0"],\
             ["picomatch", "npm:2.3.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["recoil", [\
+        ["npm:0.7.6", {\
+          "packageLocation": "./.yarn/cache/recoil-npm-0.7.6-6f8de04e3d-2b31dd29a7.zip/node_modules/recoil/",\
+          "packageDependencies": [\
+            ["recoil", "npm:0.7.6"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:0.7.6", {\
+          "packageLocation": "./.yarn/__virtual__/recoil-virtual-8cca111d28/0/cache/recoil-npm-0.7.6-6f8de04e3d-2b31dd29a7.zip/node_modules/recoil/",\
+          "packageDependencies": [\
+            ["recoil", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:0.7.6"],\
+            ["@types/react", "npm:18.0.27"],\
+            ["@types/react-dom", "npm:18.0.10"],\
+            ["@types/react-native", null],\
+            ["hamt_plus", "npm:1.0.2"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:61b435513f5ec04d5269d92d0ecb0165f267294d43153ad1ece8f887d4820feeb9e5ac6b977bb2c76a4a3fac1cabb70c96a0fff771c6187ca03cb3384caa881c#npm:18.2.0"],\
+            ["react-native", null]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react-native",\
+            "@types/react",\
+            "react-dom",\
+            "react-native",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
