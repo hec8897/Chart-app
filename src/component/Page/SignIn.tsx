@@ -3,6 +3,8 @@ import { LayoutContainer } from "component/template";
 import { Input, Flex, SubmitButton } from "component/UI";
 import { useForm } from "react-hook-form";
 import { useRequest } from "hooks";
+import { useRecoilValue } from "recoil";
+import { authoState } from "store/autho";
 
 interface Autho {
   uid: string;
@@ -16,6 +18,7 @@ const REGISTER_OPTION = {
 };
 
 const SignIn = () => {
+  const { postAutho } = useRequest();
   const {
     register,
     handleSubmit,
@@ -23,20 +26,16 @@ const SignIn = () => {
   } = useForm<Autho>({
     defaultValues: {
       uid: "test-id",
-      password: "",
+      password: "123",
     },
   });
-  const { postAutho } = useRequest();
 
-  const onSubmit = useCallback(
-    (data: Autho) => {
-      postAutho(data);
-    },
-    [postAutho]
-  );
+  const onSubmit = useCallback((data: Autho) => postAutho(data), [postAutho]);
+  const value = useRecoilValue(authoState);
 
   return (
     <LayoutContainer>
+      {value.name}
       <form
         className="max-w-[600px] m-auto py-[20%]"
         onSubmit={handleSubmit(onSubmit)}
