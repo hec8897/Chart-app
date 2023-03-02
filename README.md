@@ -30,7 +30,7 @@ const {
 });
 
 const onSubmit = (data: Autho) => {
-  postAutho(data);
+  console.log(data);
 };
 
 return (
