@@ -1,4 +1,5 @@
 # react-module-playground
+
 리엑트에서 많이 사용하는 모듈 play ground
 
 ## Getting Started
@@ -8,6 +9,8 @@ yarn set version berry
 
 yarn dev
 ```
+
+---
 
 ## react-hook-form
 
@@ -53,7 +56,63 @@ const FormInput = forwardRef<HTMLInputElement, IProps>((props, ref) => {
 FormInput.displayName = "FormInput"; // lint 에러 방지
 ```
 
+---
+
 ## recoil
+
+### 기본 설정
+
+```tsx
+// _app.tsx
+
+import { RecoilRoot } from "recoil";
+
+export default function App({ Component, pageProps }: AppProps) {
+  return <RecoilRoot>...</RecoilRoot>;
+}
+```
+
+```tsx
+// store/autho.ts
+
+import { atom } from "recoil";
+
+export const authoState = atom({
+  key: "autho",
+  default: {
+    uid: "",
+    name: "",
+  },
+});
+```
+
+### Atoms
+
+#### useRecoilValue
+
+```tsx
+import { useRecoilValue } from "recoil";
+
+const value = useRecoilValue(authoState);
+```
+
+#### useSetRecoilState
+
+```tsx
+import { useSetRecoilState } from "recoil";
+
+const setValue = useSetRecoilState(authoState);
+```
+
+#### useRecoilState
+
+```tsx
+import { useRecoilState } from "recoil";
+
+const [state, setState] = useRecoilState(todoListState);
+```
+
+---
 
 ## react-query
 
