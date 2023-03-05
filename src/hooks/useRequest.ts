@@ -9,6 +9,7 @@ const useRequest = () => {
   const { push } = useRouter();
   const { setSession } = useStorage();
   const setValue = useSetRecoilState(authoState);
+
   const getList = useCallback(async () => {
     const request = await axios.get(
       "https://jsonplaceholder.typicode.com/posts/1"
@@ -28,7 +29,7 @@ const useRequest = () => {
         );
         const { name, uid } = res.data;
         setSession("autho", res.data);
-        setValue({ name, uid });
+        setValue({ name, uid, login: true });
         push("/");
         return true;
       } catch {

@@ -1,8 +1,15 @@
 import { atom } from "recoil";
 
-export const authoState = atom({
+interface IAutho {
+  uid: string;
+  name: string;
+  login: boolean;
+}
+
+export const authoState = atom<IAutho>({
   key: "autho",
   default: {
+    login: false,
     uid: "",
     name: "",
   },
