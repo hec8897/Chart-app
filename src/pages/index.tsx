@@ -1,7 +1,8 @@
-import { Suspense } from "react";
+import react from "react";
 import { PageContainer } from "component";
 import { useRequest } from "hooks";
 import { useQuery } from "react-query";
+import { Autho } from "component";
 
 const Title = ({ title }: { title: string }) => {
   return <div>{title}</div>;
@@ -9,17 +10,17 @@ const Title = ({ title }: { title: string }) => {
 
 const Home = () => {
   const { getList } = useRequest();
+
   const { data } = useQuery("list", getList, {
     suspense: true,
   });
+
   return (
-    <PageContainer>
-      <Suspense
-        fallback={<div>loadingloadingloadingloadingloadingloading</div>}
-      >
+    <Autho>
+      <PageContainer>
         <Title title={data.title} />
-      </Suspense>
-    </PageContainer>
+      </PageContainer>
+    </Autho>
   );
 };
 
