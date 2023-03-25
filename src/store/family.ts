@@ -1,4 +1,4 @@
-import { atomFamily, selectorFamily } from "recoil";
+import { atom, atomFamily, selectorFamily } from "recoil";
 
 interface IAutho {
   uid: string;
@@ -9,9 +9,22 @@ interface IAutho {
 export const familyAtomFamily = atomFamily({
   key: "cardFamily",
   default: (id) => ({ id, count: 0, title: "title" + id?.toString() }),
-  //   set:(id)=>{}
-  //   default: [
-  //     { id: 0, count: 0, title: "title1" },
-  //     { id: 0, count: 0, title: "title2" },
-  //   ],
+});
+
+export const atomCard = atom({
+  key: "cardAtom",
+  default: {
+    count: 0,
+    title: "title",
+  },
+});
+
+export const familySelector = selectorFamily({
+  key: "cardFamil/Sector",
+  get:
+    (id) =>
+    ({ get }) => {
+      const data = get(atomCard);
+      return { data, id: id };
+    },
 });
