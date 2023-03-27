@@ -45,7 +45,7 @@ const Home = () => {
           <Title title={data.title} />
           <div className="flex flex-col gap-2 my-2">
             {originData.map((ele) => (
-              <BoxComponent key={ele.id} id={ele.id} data={ele} />
+              <BoxComponent key={ele.id} data={ele} />
             ))}
           </div>
         </div>

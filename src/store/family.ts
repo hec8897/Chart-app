@@ -19,21 +19,3 @@ export const familyAtomFamily = atomFamily({
   }),
   effects_UNSTABLE: [persistAtom],
 });
-
-// export const atomCard = atom({
-//   key: "cardAtom",
-//   default: {
-//     count: 0,
-//     title: "title",
-//   },
-// });
-
-// export const familySelector = selectorFamily({
-//   key: "cardFamil/Sector",
-//   get:
-//     (data: { id: string; name: string }) =>
-//     ({ get }) => {
-//       const atom = get(atomCard);
-//       return { ...data, atom, id: data.id };
-//     },
-// });
