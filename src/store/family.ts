@@ -1,30 +1,39 @@
-import { atom, atomFamily, selectorFamily } from "recoil";
+import { atomFamily } from "recoil";
+import { recoilPersist } from "recoil-persist";
 
-interface IAutho {
-  uid: string;
-  name: string;
-  login: boolean;
-}
+const sessionStorage =
+  typeof window !== "undefined" ? window.sessionStorage : undefined;
+
+const { persistAtom } = recoilPersist({
+  key: "atom-key",
+  storage: sessionStorage,
+});
 
 export const familyAtomFamily = atomFamily({
   key: "cardFamily",
-  default: (id) => ({ id, count: 0, title: "title" + id?.toString() }),
-});
-
-export const atomCard = atom({
-  key: "cardAtom",
-  default: {
+  default: (data: { id: string; name: string }) => ({
+    ...data,
+    id: data.id,
     count: 0,
-    title: "title",
-  },
+    title: "title" + data.id?.toString(),
+  }),
+  effects_UNSTABLE: [persistAtom],
 });
 
-export const familySelector = selectorFamily({
-  key: "cardFamil/Sector",
-  get:
-    (id) =>
-    ({ get }) => {
-      const data = get(atomCard);
-      return { data, id: id };
-    },
-});
+// export const atomCard = atom({
+//   key: "cardAtom",
+//   default: {
+//     count: 0,
+//     title: "title",
+//   },
+// });
+
+// export const familySelector = selectorFamily({
+//   key: "cardFamil/Sector",
+//   get:
+//     (data: { id: string; name: string }) =>
+//     ({ get }) => {
+//       const atom = get(atomCard);
+//       return { ...data, atom, id: data.id };
+//     },
+// });

@@ -10,8 +10,8 @@ const Title = ({ title }: { title: string }) => {
   return <div>{title}</div>;
 };
 
-const BoxComponent = ({ id }: { id: number }) => {
-  const [value, setCount] = useRecoilState(familyAtomFamily(id));
+const BoxComponent = ({ data }: { data: { id: string; name: string } }) => {
+  const [value, setCount] = useRecoilState(familyAtomFamily(data));
 
   return (
     <div className="border p-2 rounded text-center">
@@ -28,7 +28,10 @@ const BoxComponent = ({ id }: { id: number }) => {
 };
 
 const Home = () => {
-  const familyKey = [1, 2, 3];
+  const originData = [
+    { id: "test-0", name: "dawoon" },
+    { id: "test-2", name: "dawoon-2" },
+  ];
   const { getList } = useRequest();
 
   const { data } = useQuery("list", getList, {
@@ -41,8 +44,8 @@ const Home = () => {
         <div className="p-2">
           <Title title={data.title} />
           <div className="flex flex-col gap-2 my-2">
-            {familyKey.map((ele) => (
-              <BoxComponent key={ele} id={ele} />
+            {originData.map((ele) => (
+              <BoxComponent key={ele.id} id={ele.id} data={ele} />
             ))}
           </div>
         </div>
