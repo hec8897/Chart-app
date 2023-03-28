@@ -1,10 +1,11 @@
 import { useCallback } from "react";
 import { LayoutContainer } from "component/template";
-import { Input, Flex, SubmitButton } from "component/UI";
-import { useForm } from "react-hook-form";
+import { Flex, SubmitButton } from "component/UI";
+import { useForm, FormProvider } from "react-hook-form";
 import { useRequest } from "hooks";
 import { useRecoilValue } from "recoil";
 import { authoState } from "store/autho";
+import StringInput from "./StringInput";
 
 interface Autho {
   uid: string;
@@ -19,16 +20,18 @@ const REGISTER_OPTION = {
 
 const SignIn = () => {
   const { postAutho } = useRequest();
-  const {
-    register,
-    handleSubmit,
-    formState: { isValid, errors },
-  } = useForm<Autho>({
+  const methods = useForm<Autho>({
     defaultValues: {
       uid: "test-id",
       password: "123",
     },
   });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { isValid, errors },
+  } = methods;
 
   const onSubmit = useCallback((data: Autho) => postAutho(data), [postAutho]);
   const value = useRecoilValue(authoState);
@@ -36,34 +39,30 @@ const SignIn = () => {
   return (
     <LayoutContainer>
       {value.name}
-      <form
-        className="max-w-[600px] m-auto py-[20%]"
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <Flex $col>
-          <h1 className="text-center text-xl font-bold mb-2">Chart-app</h1>
-          <Input
-            title="User Id"
-            placeholder="user id"
-            message={errors.uid?.message}
-            register={register("uid", {
-              ...REGISTER_OPTION,
-              required: "Please check your ID",
-            })}
-          />
-          <Input
-            title="User Password"
-            type="password"
-            placeholder="password"
-            message={errors.password?.message}
-            register={register("password", {
-              ...REGISTER_OPTION,
-              required: "Please check your Password",
-            })}
-          />
-          <SubmitButton value="User Login" $active={isValid} />
-        </Flex>
-      </form>
+      <FormProvider {...methods}>
+        <form
+          className="max-w-[600px] m-auto py-[20%]"
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <Flex $col>
+            <h1 className="text-center text-xl font-bold mb-2">Chart-app</h1>
+            <StringInput
+              name="uid"
+              title="User Id"
+              placeholder="user id"
+              message={errors.uid?.message}
+            />
+            <StringInput
+              name="password"
+              title="User Password"
+              type="password"
+              placeholder="password"
+              message={errors.password?.message}
+            />
+            <SubmitButton value="User Login" $active={isValid} />
+          </Flex>
+        </form>
+      </FormProvider>
     </LayoutContainer>
   );
 };
